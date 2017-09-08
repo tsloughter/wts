@@ -1,0 +1,15 @@
+{application, wts,
+ [{description, "Timestamp support functions"},
+  {vsn, "0.1.0"},
+  {registered, []},
+  {applications,
+   [kernel,
+    stdlib
+   ]},
+  {env,[]},
+  {modules, []},
+
+  {maintainers, ["Tristan Sloughter"]},
+  {licenses, ["Apache 2.0"]},
+  {links, [{"Github", "https://github.com/tsloughter/wts"}]}
+ ]}.
