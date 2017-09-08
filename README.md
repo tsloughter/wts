@@ -1,11 +1,9 @@
-wts
-=====
+## wts
 
 Warp the Timestamps or something.
 
 
-Usage
------
+### Usage
 
 This library is for use with the suggested Erlang VM args for time warp mode and time correction:
 
@@ -33,3 +31,7 @@ Example usage to find the time elapsed while performing some function and conver
 %% convert to microseconds since the epoch
 > wts:to_absolute(StartTime).
 ```
+
+### Credits
+
+Created thanks to Elixir's [Tapper timestamp module](https://github.com/Financial-Times/tapper/blob/master/lib/tapper/timestamp.ex#L32).
