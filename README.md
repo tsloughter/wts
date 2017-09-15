@@ -32,6 +32,13 @@ Example usage to find the time elapsed while performing some function and conver
 > wts:to_absolute(StartTime).
 ```
 
+Additionally there is support for converting to an rfc3339 format string:
+
+```
+> wts:rfc3339(wts:timestamp()).
+{ok,<<"2017-09-15T02:48:11.118825Z">>}
+```
+
 ### Credits
 
 Created thanks to Elixir's [Tapper timestamp module](https://github.com/Financial-Times/tapper/blob/master/lib/tapper/timestamp.ex#L32).

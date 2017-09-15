@@ -42,7 +42,9 @@
 
 -export([timestamp/0,
          to_absolute/1,
-         duration/2]).
+         duration/2,
+
+         rfc3339/1]).
 
 -export_type([timestamp/0]).
 
@@ -66,6 +68,12 @@ to_absolute({Timestamp, Offset}) ->
 -spec duration(timestamp(), timestamp()) -> microseconds_timestamp().
 duration({Timestamp1, _}, {Timestamp2, _}) ->
     erlang:convert_time_unit(Timestamp2 - Timestamp1, native, microsecond).
+
+%% @doc Converts the timestamp to rfc3339 format string.
+-spec rfc3339(timestamp()) -> binary().
+rfc3339({Timestamp, Offset}) ->
+    {ok, DateTime} = rfc3339:format(Timestamp+Offset),
+    DateTime.
 
 -ifdef(TEST).
 -include_lib("eunit/include/eunit.hrl").
