@@ -1,10 +1,11 @@
 {application, wts,
  [{description, "Timestamp support functions"},
-  {vsn, "0.2.0"},
+  {vsn, "0.3.0"},
   {registered, []},
   {applications,
    [kernel,
-    stdlib
+    stdlib,
+    rfc3339
    ]},
   {env,[]},
   {modules, []},
