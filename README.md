@@ -36,7 +36,7 @@ Additionally there is support for converting to an rfc3339 format string:
 
 ```
 > wts:rfc3339(wts:timestamp()).
-{ok,<<"2017-09-15T02:48:11.118825Z">>}
+<<"2017-09-15T02:48:11.118825Z">>
 ```
 
 ### Credits
