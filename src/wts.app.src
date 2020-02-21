@@ -9,7 +9,6 @@
   {env,[]},
   {modules, []},
 
-  {maintainers, ["Tristan Sloughter"]},
   {licenses, ["Apache 2.0"]},
   {links, [{"Github", "https://github.com/tsloughter/wts"}]}
  ]}.
