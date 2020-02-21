@@ -71,8 +71,8 @@ duration({Timestamp1, _}, {Timestamp2, _}) ->
 
 %% @doc Converts the timestamp to rfc3339 format string.
 -spec rfc3339(timestamp()) -> binary().
-rfc3339({Timestamp, Offset}) ->
-    calendar:system_time_to_rfc3339(Timestamp+Offset).
+rfc3339(Time) ->
+    calendar:system_time_to_rfc3339(to_absolute(Time), [{unit, microsecond}]).
 
 -ifdef(TEST).
 -include_lib("eunit/include/eunit.hrl").
